@@ -1,0 +1,178 @@
+/**
+ * VYAPAR SETU - Modern Crystal + Glass Architecture Design System
+ * Enterprise Government-Tech & Compliance Command Center
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Primary & Accent Palette */
+  --color-primary: #1e40af;       /* Royal / Deep Blue */
+  --color-primary-light: #3b82f6;
+  --color-accent-cyan: #0284c7;    /* AI / Intelligence Accent */
+  
+  /* Crystal Surface Tokens */
+  --crystal-bg: rgba(255, 255, 255, 0.72);
+  --crystal-bg-solid: #ffffff;
+  --crystal-border: rgba(226, 232, 240, 0.85);
+  --crystal-border-highlight: rgba(255, 255, 255, 0.95);
+  
+  /* Background Base */
+  --base-bg: #f8fafc;
+  --base-grid: rgba(203, 213, 225, 0.35);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--base-bg);
+  color: #0f172a;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(at 15% 10%, rgba(219, 234, 254, 0.45) 0px, transparent 40%),
+    radial-gradient(at 85% 15%, rgba(224, 242, 254, 0.5) 0px, transparent 45%),
+    radial-gradient(at 50% 80%, rgba(241, 245, 249, 0.7) 0px, transparent 50%),
+    radial-gradient(var(--base-grid) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 28px 28px;
+}
+
+/* Subtle Geometric Crystal Shapes in Background */
+.crystal-bg-shapes {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.crystal-shape-1 {
+  position: absolute;
+  top: 6%;
+  right: 12%;
+  width: 480px;
+  height: 480px;
+  background: linear-gradient(135deg, rgba(219, 234, 254, 0.4) 0%, rgba(240, 249, 255, 0.2) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  filter: blur(40px);
+  transform: rotate(25deg);
+}
+.crystal-shape-2 {
+  position: absolute;
+  top: 35%;
+  left: 4%;
+  width: 380px;
+  height: 380px;
+  background: linear-gradient(135deg, rgba(224, 242, 254, 0.45) 0%, rgba(238, 242, 255, 0.2) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  filter: blur(50px);
+}
+
+/* Custom Scrollbar - Clean & Minimal */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Crystal Glass Card & Panel */
+.crystal-panel {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03), 0 1px 2px -1px rgba(15, 23, 42, 0.04), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+}
+
+.crystal-panel-interactive {
+  background: rgba(255, 255, 255, 0.80);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.crystal-panel-interactive:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(147, 197, 253, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -8px rgba(37, 99, 235, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.9) inset;
+}
+
+/* Crystal Prism Highlights */
+.crystal-prism {
+  position: relative;
+}
+.crystal-prism::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.9) 25%, rgba(191, 219, 254, 0.8) 50%, rgba(255, 255, 255, 0.9) 75%, transparent 100%);
+}
+
+/* Floating Glass Cards */
+.floating-glass-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.95) inset;
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Circular Score Gauge */
+.score-circle-meter {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 1.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Workflow Connector Line */
+.workflow-line {
+  background: linear-gradient(90deg, #93c5fd 0%, #3b82f6 50%, #93c5fd 100%);
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+}
+
+/* Monospace & Badges */
+.mono-tag {
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+}
+
+/* Print Optimization for Verification Report */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+  header, nav, #toast-container, .no-print, .crystal-bg-shapes {
+    display: none !important;
+  }
+  .crystal-panel {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

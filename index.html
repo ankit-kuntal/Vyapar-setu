@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VYAPAR SETU — Industrial Approvals & Compliance Pre-Verification Platform</title>
+  <meta name="description" content="A crystal-clear compliance command center. Pre-verification and readiness scoring platform for industrial approvals and compliance across MAITRI, MPCB, MIDC, and Aaple Sarkar.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a'
+            },
+            crystal: {
+              surface: 'rgba(255, 255, 255, 0.78)',
+              border: 'rgba(226, 232, 240, 0.85)',
+              accent: '#0284c7'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Crystal Design System -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#f8fafc] text-slate-900 min-h-screen flex flex-col antialiased selection:bg-blue-600 selection:text-white relative">
+
+  <!-- Background Subtle Crystal Geometry -->
+  <div class="crystal-bg-shapes">
+    <div class="crystal-shape-1"></div>
+    <div class="crystal-shape-2"></div>
+  </div>
+
+  <!-- Top Header Navigation -->
+  <div id="header-container" class="relative z-50"></div>
+
+  <!-- Main Dynamic Application Container -->
+  <main id="main-container" class="flex-grow relative z-10"></main>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-none *:pointer-events-auto"></div>
+
+  <!-- Persistent Master Footer with Statutory Disclaimer (Section 26) -->
+  <footer class="mt-auto border-t border-slate-200/80 bg-white/75 backdrop-blur-md py-8 text-slate-500 text-xs no-print relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-xs shadow-md shadow-blue-500/20">
+            SC
+          </div>
+          <div>
+            <span class="font-bold text-slate-900 text-sm">VYAPAR SETU</span>
+            <span class="text-[11px] text-slate-500 ml-2">Maharashtra Industrial Approvals Pre-Verification Platform</span>
+          </div>
+        </div>
+
+        <!-- Quick Navigation Footer Links -->
+        <div class="flex flex-wrap items-center gap-4 text-xs font-medium text-slate-600">
+          <button onclick="Store.navigate('landing')" class="hover:text-blue-600 transition">Home</button>
+          <button onclick="Store.navigate('dashboard')" class="hover:text-blue-600 transition">Dashboard</button>
+          <button onclick="Store.navigate('checklist')" class="hover:text-blue-600 transition">Checklist</button>
+          <button onclick="Store.navigate('report')" class="hover:text-blue-600 transition">Readiness Score</button>
+          <button onclick="Store.navigate('government-routing')" class="hover:text-blue-600 transition">MAITRI Directory</button>
+          <button onclick="Store.navigate('admin')" class="hover:text-purple-600 text-purple-700 transition">Admin Console</button>
+        </div>
+      </div>
+
+      <!-- Statutory Disclaimer Box (Section 26 of Requirements) -->
+      <div class="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200 text-[11px] text-amber-900 leading-relaxed">
+        <span class="text-amber-800 font-bold uppercase tracking-wider text-[10px] block mb-0.5">Section 26 Regulatory Product Notice</span>
+        VYAPAR SETU is an automated pre-submission assistance and document-readiness system. Its AI and deterministic output is presented strictly as an automated pre-check, and NOT as statutory certification, legal advice, or government approval. Final approval remains strictly with the relevant government authority (MAITRI, MPCB, MIDC, DISH).
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between text-[10px] text-slate-400 pt-2 border-t border-slate-100">
+        <div>Enterprise Stack: Modern Crystal UI • Vanilla JavaScript • Python Django 5 Ready • PostgreSQL Compatible</div>
+        <div class="mt-1 sm:mt-0 font-mono">Build v1.0.0-SIH-MVP</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts in Correct Dependency Hierarchy -->
+  <script src="js/config.js"></script>
+  <script src="js/validators.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/store.js"></script>
+  
+  <!-- UI Components -->
+  <script src="js/components/navbar.js"></script>
+  <script src="js/components/landing.js"></script>
+  <script src="js/components/auth.js"></script>
+  <script src="js/components/onboarding.js"></script>
+  <script src="js/components/dashboard.js"></script>
+  <script src="js/components/businessProfile.js"></script>
+  <script src="js/components/checklist.js"></script>
+  <script src="js/components/upload.js"></script>
+  <script src="js/components/verification.js"></script>
+  <script src="js/components/report.js"></script>
+  <script src="js/components/routing.js"></script>
+  <script src="js/components/profile.js"></script>
+  <script src="js/components/admin.js"></script>
+  
+  <!-- Main Application Entrypoint -->
+  <script src="js/app.js"></script>
+
+</body>
+</html>
